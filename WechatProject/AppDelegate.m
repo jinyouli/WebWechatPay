@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WXApi.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -18,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    ViewController *firstVC = [[ViewController alloc] init];
+    
+    [self.window setRootViewController:firstVC];
+    [self.window makeKeyAndVisible];
     
     [WXApi registerApp:@"wxd9f688046e35de2a"];
     return YES;

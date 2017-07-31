@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    NSURL *url = [NSURL URLWithString:@"http://99y.wy-8.com/index.php?m=login&a=reg&shareuid=99169006"];
+    NSURL *url = [NSURL URLWithString:@"http://99y.wy-8.com/"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     webView.delegate = self;
