@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		662C500C5FC77E4ADFDADE38 /* libPods-WechatProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92E04B8EB2337F7BC0C560E /* libPods-WechatProject.a */; };
-		F85ACE881F2F628200A107C1 /* LaunchImage_HD_2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F85ACE841F2F628200A107C1 /* LaunchImage_HD_2x@2x.png */; };
-		F85ACE891F2F628200A107C1 /* LaunchImage_HD_4.7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F85ACE851F2F628200A107C1 /* LaunchImage_HD_4.7@2x.png */; };
-		F85ACE8A1F2F628200A107C1 /* LaunchImage_HD_5.5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F85ACE861F2F628200A107C1 /* LaunchImage_HD_5.5@3x.png */; };
-		F85ACE8B1F2F628200A107C1 /* LaunchImage_HD_Retina4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F85ACE871F2F628200A107C1 /* LaunchImage_HD_Retina4@2x.png */; };
+		F8E6FF0B1F301A2E00BA25F7 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E6FF0A1F301A2E00BA25F7 /* LaunchImage.png */; };
 		F8F6FE001F20489F00058DD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6FDFF1F20489F00058DD6 /* main.m */; };
 		F8F6FE031F20489F00058DD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6FE021F20489F00058DD6 /* AppDelegate.m */; };
 		F8F6FE061F20489F00058DD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6FE051F20489F00058DD6 /* ViewController.m */; };
@@ -41,10 +38,7 @@
 		E92E04B8EB2337F7BC0C560E /* libPods-WechatProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WechatProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5419059116676ECBBCCD8 /* Pods-WechatProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-WechatProject/Pods-WechatProject.release.xcconfig"; sourceTree = "<group>"; };
 		F6972AC255B7DC5E150E3A1B /* Pods-WechatProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WechatProject/Pods-WechatProject.debug.xcconfig"; sourceTree = "<group>"; };
-		F85ACE841F2F628200A107C1 /* LaunchImage_HD_2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage_HD_2x@2x.png"; sourceTree = "<group>"; };
-		F85ACE851F2F628200A107C1 /* LaunchImage_HD_4.7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage_HD_4.7@2x.png"; sourceTree = "<group>"; };
-		F85ACE861F2F628200A107C1 /* LaunchImage_HD_5.5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage_HD_5.5@3x.png"; sourceTree = "<group>"; };
-		F85ACE871F2F628200A107C1 /* LaunchImage_HD_Retina4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage_HD_Retina4@2x.png"; sourceTree = "<group>"; };
+		F8E6FF0A1F301A2E00BA25F7 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		F8F6FDFB1F20489F00058DD6 /* WechatProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F6FDFF1F20489F00058DD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8F6FE011F20489F00058DD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,10 +101,7 @@
 		F85ACE831F2F628200A107C1 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				F85ACE841F2F628200A107C1 /* LaunchImage_HD_2x@2x.png */,
-				F85ACE851F2F628200A107C1 /* LaunchImage_HD_4.7@2x.png */,
-				F85ACE861F2F628200A107C1 /* LaunchImage_HD_5.5@3x.png */,
-				F85ACE871F2F628200A107C1 /* LaunchImage_HD_Retina4@2x.png */,
+				F8E6FF0A1F301A2E00BA25F7 /* LaunchImage.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -290,11 +281,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E6FF0B1F301A2E00BA25F7 /* LaunchImage.png in Resources */,
 				F8F6FE0B1F20489F00058DD6 /* Assets.xcassets in Resources */,
-				F85ACE8B1F2F628200A107C1 /* LaunchImage_HD_Retina4@2x.png in Resources */,
-				F85ACE881F2F628200A107C1 /* LaunchImage_HD_2x@2x.png in Resources */,
-				F85ACE891F2F628200A107C1 /* LaunchImage_HD_4.7@2x.png in Resources */,
-				F85ACE8A1F2F628200A107C1 /* LaunchImage_HD_5.5@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

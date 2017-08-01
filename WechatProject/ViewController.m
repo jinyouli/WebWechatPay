@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController ()<UIWebViewDelegate>
 @property (nonatomic,strong) UIWebView *webView;
+@property (nonatomic,strong)MBProgressHUD *progressHud;
 @end
 
 @implementation ViewController
@@ -25,6 +27,14 @@
     
     [self.view addSubview:webView];
     self.webView = webView;
+    
+    self.progressHud = [[MBProgressHUD alloc] initWithView:self.view];
+    
+    self.progressHud.label.text = @"加载中";
+    [self.progressHud showAnimated:YES];
+    
+    //self.progressHud.delegate = self;
+    [self.view addSubview:self.progressHud];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
@@ -34,10 +44,15 @@
     
     if ([strUrl hasPrefix:@"https://wappaygw.alipay.com/"]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"消息" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
-        return NO;
+        //[alert show];
+        //return NO;
     }
     return YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.progressHud hideAnimated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

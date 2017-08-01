@@ -27,7 +27,7 @@
     [self.window setRootViewController:firstVC];
     [self.window makeKeyAndVisible];
     
-    [WXApi registerApp:@"wxd9f688046e35de2a"];
+    //[WXApi registerApp:@"wxd9f688046e35de2a"];
     return YES;
 }
 
