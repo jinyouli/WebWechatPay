@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "WXApi.h"
 #import "ViewController.h"
 
 @interface AppDelegate ()<WXApiDelegate>
@@ -23,6 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     ViewController *firstVC = [[ViewController alloc] init];
+    firstVC.view.backgroundColor = [UIColor whiteColor];
     
     [self.window setRootViewController:firstVC];
     [self.window makeKeyAndVisible];

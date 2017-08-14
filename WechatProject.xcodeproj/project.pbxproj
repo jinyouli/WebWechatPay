@@ -38,6 +38,7 @@
 		E92E04B8EB2337F7BC0C560E /* libPods-WechatProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WechatProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5419059116676ECBBCCD8 /* Pods-WechatProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-WechatProject/Pods-WechatProject.release.xcconfig"; sourceTree = "<group>"; };
 		F6972AC255B7DC5E150E3A1B /* Pods-WechatProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WechatProject/Pods-WechatProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F803488F1F4140FD009D6499 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F8E6FF0A1F301A2E00BA25F7 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		F8F6FDFB1F20489F00058DD6 /* WechatProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F6FDFF1F20489F00058DD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 				F8F6FE0A1F20489F00058DD6 /* Assets.xcassets */,
 				F8F6FE0F1F20489F00058DD6 /* Info.plist */,
 				F8F6FDFE1F20489F00058DD6 /* Supporting Files */,
+				F803488F1F4140FD009D6499 /* PrefixHeader.pch */,
 			);
 			path = WechatProject;
 			sourceTree = "<group>";
@@ -239,7 +241,7 @@
 				TargetAttributes = {
 					F8F6FDFA1F20489F00058DD6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 757Z9C7YU9;
+						DevelopmentTeam = WNDNY35RC8;
 						ProvisioningStyle = Automatic;
 					};
 					F8F6FE131F20489F00058DD6 = {
@@ -491,7 +493,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Aircraft Maintenance Engineering Co., Ltd.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 757Z9C7YU9;
+				DEVELOPMENT_TEAM = WNDNY35RC8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WechatProject/PrefixHeader.pch;
 				INFOPLIST_FILE = WechatProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -509,7 +513,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Aircraft Maintenance Engineering Co., Ltd.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 757Z9C7YU9;
+				DEVELOPMENT_TEAM = WNDNY35RC8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WechatProject/PrefixHeader.pch;
 				INFOPLIST_FILE = WechatProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
