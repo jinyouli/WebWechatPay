@@ -11,7 +11,7 @@
 
 @protocol JSObjcDelegate <JSExport>
 - (void)call;
-- (void)getCall:(NSString *)callString;
+- (void)getCall:(NSDictionary *)callDict;
 
 @end
 

@@ -29,56 +29,42 @@
     self.webView = webView;
     
     self.progressHud = [[MBProgressHUD alloc] initWithView:self.view];
-    
     self.progressHud.label.text = @"加载中";
     [self.progressHud showAnimated:YES];
     
-    //self.progressHud.delegate = self;
     [self.view addSubview:self.progressHud];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSURL *url = [request URL];
-    NSString *strUrl = [url absoluteString];
-    
-//    if ([strUrl hasPrefix:@"https://wappaygw.alipay.com/"]) {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"消息" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [alert show];
-//        return NO;
-//    }
-    
     NSMutableURLRequest *mutableRequest = [request mutableCopy];
     NSDictionary *requestHeaders = request.allHTTPHeaderFields;
     
-    NSLog(@"头部==%@",requestHeaders);
-    if (requestHeaders[@"client-type"]) {
-        
-        return YES;
-        
-    } else {
+    if (!requestHeaders[@"client-type"]) {
         
         [mutableRequest setValue:@"jjy-ios" forHTTPHeaderField:@"client-type"];
         request = [mutableRequest copy];
         
         [webView loadRequest:request];
-        return YES;
+        return NO;
     }
     
     return YES;
 }
 
-- (void)wechatPay
+- (void)wechatPay:(NSDictionary*)payDict
 {
     PayReq *request = [[PayReq alloc] init];
     
-    request.partnerId = @"1486723942";
-    request.prepayId = @"wx20170814093300d32c2d9fe10322744508";
-    request.package = @"Sign-WXPay";
-    request.nonceStr = @"2y4qfukhsj9wz4lyhh9nifoltsjkpeay";
-    request.timeStamp = 1502674333;
-    request.sign= @"5018B102D72CBC9693E8AC2183B572DA";
+    NSDictionary *wxpayDict = payDict[@"data"][@"wxpay"];
     
+    request.partnerId = wxpayDict[@"partnerid"];
+    request.prepayId = wxpayDict[@"prepayid"];
+    request.package = wxpayDict[@"package"];
+    request.nonceStr = wxpayDict[@"noncestr"];
+    request.timeStamp = [wxpayDict[@"timestamp"] intValue];
+    request.sign= wxpayDict[@"sign"];
+
     [WXApi sendReq:request];
 }
 
@@ -93,13 +79,11 @@
     };
 }
 
-- (void)getCall:(NSString *)callString{
-    NSLog(@"Get:%@", callString);
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    //[self wechatPay];
+- (void)getCall:(NSDictionary *)callDict{
+    
+    NSLog(@"Get:%@", callDict);
+    
+    [self wechatPay:callDict];
 }
 
 - (void)didReceiveMemoryWarning {
