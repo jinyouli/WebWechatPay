@@ -12,6 +12,8 @@
 @interface ViewController ()<UIWebViewDelegate>
 @property (nonatomic,strong) UIWebView *webView;
 @property (nonatomic,strong)MBProgressHUD *progressHud;
+
+@property (nonatomic,copy) NSString *returnUrl;
 @end
 
 @implementation ViewController
@@ -33,10 +35,36 @@
     [self.progressHud showAnimated:YES];
     
     [self.view addSubview:self.progressHud];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(payReturn:) name:@"WX_PaySuccess" object:nil];
 }
+
+- (void)payReturn:(NSNotification *)notif
+{
+    //http://99y.wy-8.com/trade/index.php?m=myorder&a=info&id=176
+    
+    NSURL *url;
+    if (![self.returnUrl isEqualToString:@""]) {
+        url = [NSURL URLWithString:self.returnUrl];
+    }else{
+        url = [NSURL URLWithString:@"http://99y.wy-8.com/index.php?m=center"];
+    }
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+    
+    NSString *msg = notif.object;
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alertView show];
+}
+
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
+    NSURL *url = [request URL];
+    NSString *strUrl = [url absoluteString];
+    NSLog(@"连接==%@",strUrl);
+    
     NSMutableURLRequest *mutableRequest = [request mutableCopy];
     NSDictionary *requestHeaders = request.allHTTPHeaderFields;
     
@@ -54,6 +82,8 @@
 
 - (void)wechatPay:(NSDictionary*)payDict
 {
+    self.returnUrl = payDict[@"data"][@"order_detail_url"];
+    
     PayReq *request = [[PayReq alloc] init];
     
     NSDictionary *wxpayDict = payDict[@"data"][@"wxpay"];

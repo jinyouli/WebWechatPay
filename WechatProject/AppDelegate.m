@@ -27,7 +27,7 @@
     [self.window setRootViewController:firstVC];
     [self.window makeKeyAndVisible];
     
-    //[WXApi registerApp:@"wxd9f688046e35de2a"];
+    [WXApi registerApp:@"wxf95d96900076001d"];
     return YES;
 }
 
@@ -56,7 +56,6 @@
         switch (resp.errCode) {
             case WXSuccess:
                 payResoult = @"支付结果：成功！";
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"WX_PaySuccess" object:nil];
             break;
             case WXErrCodeCommon:
                 payResoult = @"支付结果：失败！";
@@ -68,6 +67,7 @@
                 payResoult = [NSString stringWithFormat:@"支付结果：失败！retcode = %d, retstr = %@", resp.errCode,resp.errStr];
             break;
         }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"WX_PaySuccess" object:payResoult];
     }
 }
 
