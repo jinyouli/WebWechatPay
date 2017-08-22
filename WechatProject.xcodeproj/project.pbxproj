@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		662C500C5FC77E4ADFDADE38 /* libPods-WechatProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92E04B8EB2337F7BC0C560E /* libPods-WechatProject.a */; };
+		F8D488DB1F4C196F0005CDA9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D488DA1F4C196F0005CDA9 /* MainViewController.m */; };
+		F8D488DE1F4C19830005CDA9 /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D488DD1F4C19830005CDA9 /* JoinViewController.m */; };
+		F8D488E11F4C19A10005CDA9 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D488E01F4C19A10005CDA9 /* MyInfoViewController.m */; };
+		F8D488E41F4C19C50005CDA9 /* AgenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D488E31F4C19C50005CDA9 /* AgenceViewController.m */; };
+		F8D488ED1F4C1D360005CDA9 /* join_1@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488E51F4C1D360005CDA9 /* join_1@4x.png */; };
+		F8D488EE1F4C1D360005CDA9 /* join@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488E61F4C1D360005CDA9 /* join@4x.png */; };
+		F8D488EF1F4C1D360005CDA9 /* agence_1@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488E71F4C1D360005CDA9 /* agence_1@4x.png */; };
+		F8D488F01F4C1D360005CDA9 /* agence@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488E81F4C1D360005CDA9 /* agence@4x.png */; };
+		F8D488F11F4C1D360005CDA9 /* main_1@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488E91F4C1D360005CDA9 /* main_1@4x.png */; };
+		F8D488F21F4C1D360005CDA9 /* main@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488EA1F4C1D360005CDA9 /* main@4x.png */; };
+		F8D488F31F4C1D360005CDA9 /* me_1@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488EB1F4C1D360005CDA9 /* me_1@4x.png */; };
+		F8D488F41F4C1D360005CDA9 /* me@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D488EC1F4C1D360005CDA9 /* me@4x.png */; };
 		F8E6FF0B1F301A2E00BA25F7 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E6FF0A1F301A2E00BA25F7 /* LaunchImage.png */; };
 		F8F6FE001F20489F00058DD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6FDFF1F20489F00058DD6 /* main.m */; };
 		F8F6FE031F20489F00058DD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6FE021F20489F00058DD6 /* AppDelegate.m */; };
@@ -39,6 +51,22 @@
 		F1A5419059116676ECBBCCD8 /* Pods-WechatProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-WechatProject/Pods-WechatProject.release.xcconfig"; sourceTree = "<group>"; };
 		F6972AC255B7DC5E150E3A1B /* Pods-WechatProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WechatProject/Pods-WechatProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F803488F1F4140FD009D6499 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F8D488D91F4C196F0005CDA9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F8D488DA1F4C196F0005CDA9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F8D488DC1F4C19830005CDA9 /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinViewController.h; sourceTree = "<group>"; };
+		F8D488DD1F4C19830005CDA9 /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinViewController.m; sourceTree = "<group>"; };
+		F8D488DF1F4C19A10005CDA9 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
+		F8D488E01F4C19A10005CDA9 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
+		F8D488E21F4C19C50005CDA9 /* AgenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgenceViewController.h; sourceTree = "<group>"; };
+		F8D488E31F4C19C50005CDA9 /* AgenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgenceViewController.m; sourceTree = "<group>"; };
+		F8D488E51F4C1D360005CDA9 /* join_1@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "join_1@4x.png"; sourceTree = "<group>"; };
+		F8D488E61F4C1D360005CDA9 /* join@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "join@4x.png"; sourceTree = "<group>"; };
+		F8D488E71F4C1D360005CDA9 /* agence_1@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agence_1@4x.png"; sourceTree = "<group>"; };
+		F8D488E81F4C1D360005CDA9 /* agence@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agence@4x.png"; sourceTree = "<group>"; };
+		F8D488E91F4C1D360005CDA9 /* main_1@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_1@4x.png"; sourceTree = "<group>"; };
+		F8D488EA1F4C1D360005CDA9 /* main@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main@4x.png"; sourceTree = "<group>"; };
+		F8D488EB1F4C1D360005CDA9 /* me_1@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_1@4x.png"; sourceTree = "<group>"; };
+		F8D488EC1F4C1D360005CDA9 /* me@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me@4x.png"; sourceTree = "<group>"; };
 		F8E6FF0A1F301A2E00BA25F7 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		F8F6FDFB1F20489F00058DD6 /* WechatProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F6FDFF1F20489F00058DD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +130,14 @@
 		F85ACE831F2F628200A107C1 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				F8D488E51F4C1D360005CDA9 /* join_1@4x.png */,
+				F8D488E61F4C1D360005CDA9 /* join@4x.png */,
+				F8D488E71F4C1D360005CDA9 /* agence_1@4x.png */,
+				F8D488E81F4C1D360005CDA9 /* agence@4x.png */,
+				F8D488E91F4C1D360005CDA9 /* main_1@4x.png */,
+				F8D488EA1F4C1D360005CDA9 /* main@4x.png */,
+				F8D488EB1F4C1D360005CDA9 /* me_1@4x.png */,
+				F8D488EC1F4C1D360005CDA9 /* me@4x.png */,
 				F8E6FF0A1F301A2E00BA25F7 /* LaunchImage.png */,
 			);
 			path = image;
@@ -135,8 +171,16 @@
 				F85ACE831F2F628200A107C1 /* image */,
 				F8F6FE011F20489F00058DD6 /* AppDelegate.h */,
 				F8F6FE021F20489F00058DD6 /* AppDelegate.m */,
+				F8D488D91F4C196F0005CDA9 /* MainViewController.h */,
+				F8D488DA1F4C196F0005CDA9 /* MainViewController.m */,
 				F8F6FE041F20489F00058DD6 /* ViewController.h */,
 				F8F6FE051F20489F00058DD6 /* ViewController.m */,
+				F8D488DC1F4C19830005CDA9 /* JoinViewController.h */,
+				F8D488DD1F4C19830005CDA9 /* JoinViewController.m */,
+				F8D488E21F4C19C50005CDA9 /* AgenceViewController.h */,
+				F8D488E31F4C19C50005CDA9 /* AgenceViewController.m */,
+				F8D488DF1F4C19A10005CDA9 /* MyInfoViewController.h */,
+				F8D488E01F4C19A10005CDA9 /* MyInfoViewController.m */,
 				F8F6FE0A1F20489F00058DD6 /* Assets.xcassets */,
 				F8F6FE0F1F20489F00058DD6 /* Info.plist */,
 				F8F6FDFE1F20489F00058DD6 /* Supporting Files */,
@@ -283,8 +327,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D488F21F4C1D360005CDA9 /* main@4x.png in Resources */,
 				F8E6FF0B1F301A2E00BA25F7 /* LaunchImage.png in Resources */,
+				F8D488F31F4C1D360005CDA9 /* me_1@4x.png in Resources */,
+				F8D488ED1F4C1D360005CDA9 /* join_1@4x.png in Resources */,
+				F8D488F01F4C1D360005CDA9 /* agence@4x.png in Resources */,
+				F8D488F41F4C1D360005CDA9 /* me@4x.png in Resources */,
+				F8D488F11F4C1D360005CDA9 /* main_1@4x.png in Resources */,
 				F8F6FE0B1F20489F00058DD6 /* Assets.xcassets in Resources */,
+				F8D488EF1F4C1D360005CDA9 /* agence_1@4x.png in Resources */,
+				F8D488EE1F4C1D360005CDA9 /* join@4x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +411,11 @@
 			files = (
 				F8F6FE061F20489F00058DD6 /* ViewController.m in Sources */,
 				F8F6FE031F20489F00058DD6 /* AppDelegate.m in Sources */,
+				F8D488DE1F4C19830005CDA9 /* JoinViewController.m in Sources */,
 				F8F6FE001F20489F00058DD6 /* main.m in Sources */,
+				F8D488E11F4C19A10005CDA9 /* MyInfoViewController.m in Sources */,
+				F8D488E41F4C19C50005CDA9 /* AgenceViewController.m in Sources */,
+				F8D488DB1F4C196F0005CDA9 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

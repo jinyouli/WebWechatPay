@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "MBProgressHUD.h"
 
 @interface ViewController ()<UIWebViewDelegate>
 @property (nonatomic,strong) UIWebView *webView;
@@ -33,8 +32,9 @@
         [[NSHTTPCookieStorage sharedHTTPCookieStorage]  setCookie:cookieuser];
     }
     
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    NSURL *url = [NSURL URLWithString:@"http://99y.wy-8.com/"];
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 48)];
+    //NSURL *url = [NSURL URLWithString:@"http://99y.wy-8.com/"];
+    NSURL *url = [NSURL URLWithString:@"http://wvvw.99jlb.vip/"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     webView.delegate = self;
@@ -46,7 +46,7 @@
     self.progressHud.label.text = @"加载中";
     [self.progressHud showAnimated:YES];
     
-    [self.view addSubview:self.progressHud];
+    //[self.view addSubview:self.progressHud];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(payReturn:) name:@"WX_PaySuccess" object:nil];
 }

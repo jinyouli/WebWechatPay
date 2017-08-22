@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WechatProject/AppDelegate.m"
-            timestampString = "524543467.438134"
+            timestampString = "525085190.292662"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-onResp:"
             landmarkType = "7">
          </BreakpointContent>

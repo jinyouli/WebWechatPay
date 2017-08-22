@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -21,14 +20,52 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    ViewController *firstVC = [[ViewController alloc] init];
-    firstVC.view.backgroundColor = [UIColor whiteColor];
+    UITabBarController *tb = [[UITabBarController alloc] init];
     
-    [self.window setRootViewController:firstVC];
+    MainViewController *MainVC = [[MainViewController alloc] init];
+    MainVC.tabBarItem.title = @"首页";
+    [self setTabImage:MainVC selectImage:@"main@4x" unSelectImage:@"main_1@4x"];
+
+    
+    ViewController *productVC = [[ViewController alloc] init];
+    productVC.tabBarItem.title = @"产品";
+    [self setTabImage:productVC selectImage:@"join@4x" unSelectImage:@"join_1@4x"];
+    
+    JoinViewController *joinVC = [[JoinViewController alloc] init];
+    joinVC.tabBarItem.title = @"加入久久";
+    [self setTabImage:joinVC selectImage:@"join@4x" unSelectImage:@"join_1@4x"];
+    
+    AgenceViewController *agenceVC = [[AgenceViewController alloc] init];
+    agenceVC.tabBarItem.title = @"成为代理";
+    [self setTabImage:agenceVC selectImage:@"agence@4x" unSelectImage:@"agence_1@4x"];
+    
+    MyInfoViewController *infoVC = [[MyInfoViewController alloc] init];
+    infoVC.tabBarItem.title = @"我";
+    [self setTabImage:infoVC selectImage:@"me@4x" unSelectImage:@"me_1@4x"];
+    
+    tb.viewControllers=@[MainVC,productVC,joinVC,agenceVC,infoVC];
+    
+    [self.window setRootViewController:tb];
     [self.window makeKeyAndVisible];
     
     [WXApi registerApp:@"wxf95d96900076001d"];
     return YES;
+}
+
+//设置tab图标
+- (void)setTabImage:(UIViewController *)vc selectImage:(NSString *)selectImage unSelectImage:(NSString *)unselectImage
+{
+    if (IOS_7) {
+        NSString *mainPath = [[NSBundle mainBundle] pathForResource:unselectImage ofType:@"png"];
+        UIImage *imgMain = [UIImage imageWithContentsOfFile:mainPath];
+        vc.tabBarItem.image = [imgMain imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        NSString *main_select_path = [[NSBundle mainBundle] pathForResource:selectImage ofType:@"png"];
+        UIImage *imgMain_select = [UIImage imageWithContentsOfFile:main_select_path];
+        vc.tabBarItem.selectedImage = [imgMain_select imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }else{
+        [vc.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png",selectImage]] withFinishedUnselectedImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png",unselectImage]]];
+    }
 }
 
 //9.0前的方法，为了适配低版本 保留
