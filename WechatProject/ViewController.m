@@ -21,6 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    if ([[NSUserDefaults standardUserDefaults]  objectForKey:@"cookies"]) {
+        NSArray *cookies =[[NSUserDefaults standardUserDefaults]  objectForKey:@"cookies"];
+        NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+        [cookieProperties setObject:[cookies objectAtIndex:0] forKey:NSHTTPCookieName];
+        [cookieProperties setObject:[cookies objectAtIndex:1] forKey:NSHTTPCookieValue];
+        [cookieProperties setObject:[cookies objectAtIndex:3] forKey:NSHTTPCookieDomain];
+        [cookieProperties setObject:[cookies objectAtIndex:4] forKey:NSHTTPCookiePath];
+        NSHTTPCookie *cookieuser = [NSHTTPCookie cookieWithProperties:cookieProperties];
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage]  setCookie:cookieuser];
+    }
+    
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     NSURL *url = [NSURL URLWithString:@"http://99y.wy-8.com/"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -63,7 +75,7 @@
 {
     NSURL *url = [request URL];
     NSString *strUrl = [url absoluteString];
-    NSLog(@"连接==%@",strUrl);
+    //NSLog(@"连接==%@",strUrl);
     
     NSMutableURLRequest *mutableRequest = [request mutableCopy];
     NSDictionary *requestHeaders = request.allHTTPHeaderFields;
@@ -107,6 +119,24 @@
         context.exception = exceptionValue;
         NSLog(@"异常信息：%@", exceptionValue);
     };
+    
+    NSArray *nCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
+    NSHTTPCookie *cookie;
+    for (id c in nCookies)
+    {
+        if ([c isKindOfClass:[NSHTTPCookie class]])
+        {
+            cookie=(NSHTTPCookie *)c;
+            
+            if ([cookie.name isEqualToString:@"PHPSESSID"]) {
+                NSNumber *sessionOnly = [NSNumber numberWithBool:cookie.sessionOnly];
+                NSNumber *isSecure = [NSNumber numberWithBool:cookie.isSecure];
+                NSArray *cookies = [NSArray arrayWithObjects:cookie.name, cookie.value, sessionOnly, cookie.domain, cookie.path, isSecure, nil];
+                [[NSUserDefaults standardUserDefaults] setObject:cookies forKey:@"cookies"];
+                break;
+            }
+        }
+    }
 }
 
 - (void)getCall:(NSDictionary *)callDict{
